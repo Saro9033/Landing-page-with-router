@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#cont1{
+    background-image: url('https://cdn.adrise.tv/tubitv-assets/img/landing-page/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+h1{
+    font-size: 35px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#p2{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: .5px;
+}
+
+#cont2{
+    background-image: url('https://cdn.adrise.tv/tubitv-assets/img/landing-page/moviesbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Change the background color as needed */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #161616; /* Change the thumb color as needed */
   }
-}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #161616; /* Change the thumb color on hover as needed */
+  }
+  
+
+/* ImageHover styles */
+.image-hover-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 256px; 
+    transition: transform 0.2s;
+  }
+  
+  .image-hover-content {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-hover-image {
+    width: 100%;
+    transition: transform 0.2s;
+  }
+  
+  .image-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .image-hover-title,
+  .image-hover-description {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .image-hover-container:hover .image-hover-image {
+    transform: scale(1.1); /* Increase the scale factor for more zoom */
+  }
+  
+  .image-hover-container:hover .image-hover-overlay {
+    opacity: 1;
+  }
+
