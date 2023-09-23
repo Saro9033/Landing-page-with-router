@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div >
+    <div style={{background:'black'}}>
     { location.pathname === '/' && <Navbar openModal={openModal}/>}
     { location.pathname !== '/' && <Navbar2 maleProf={maleProf}/>}
     {showModal && (

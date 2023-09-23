@@ -9,9 +9,9 @@ const Navbar = ({openModal}) => {
     return (
         <nav id='navbar' className="navbar navbar-expand-sm px-1 navbar-dark py-3" style={{background:'black', color:'white', zIndex:'1', position:'sticky', top:'0'}}   >
             <div className="container-fluid"> 
-            <a href="/" className="navbar-brand text-dark bg-info rounded-3 px-1  pb-2 pt-1" >
+            <Link to="/" className="navbar-brand text-dark bg-info rounded-3 px-1  pb-2 pt-1" >
                 <img src={Logo} width='70px' alt="Logo" />
-	    </a>   
+	    </Link>   
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>

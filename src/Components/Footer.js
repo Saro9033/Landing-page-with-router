@@ -1,23 +1,23 @@
 import React from 'react'
 import Logo from '../Images/logo.png'
-
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
             <div className='d-flex flex-wrap text-light pt-5 text-center' style={{ backgroundColor: 'black' }} >
                 <div className='col-12 col-lg-4 '>
-                    <a href="/"><img width='180px' className='bg-info p-3 rounded-3' src={Logo} alt="" /></a>
+                    <Link to="/"><img width='180px' className='bg-info p-3 rounded-3' src={Logo} alt="log" /></Link>
 
                 </div>
                 <div className='col-12 col-lg-4 pb-5 pt-3'>
                     <ul className='navbar-nav '>
                         <li className="nav-item">
-                            <a className="nav-link rounded-2" href='/'>Home</a>
+                            <Link className="nav-link rounded-2" to='/'>Home</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link rounded-2" href='/'>About us</a>
+                            <Link className="nav-link rounded-2" to='/about'>About us</Link>
                         </li> <li className="nav-item">
-                            <a className="nav-link rounded-2" href='/'>Contact us</a>
+                            <a className="nav-link rounded-2" href='/Landing-page-with-router'>Contact us</a>
                         </li> </ul>
 
                 </div>

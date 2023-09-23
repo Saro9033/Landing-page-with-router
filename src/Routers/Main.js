@@ -127,14 +127,17 @@ const Main = () => {
 
       <div className='container'>
         <h3 className='text-light'>Popular Movies</h3>
-        <div className='d-flex mb-3 align-items-center justify-content-center'>
+        <div className='d-flex mb-1 align-items-center justify-content-center'  style={window.innerWidth < 580 ? {flexWrap:'wrap'} : null}>
           {popularMovies.map((movie, index) => (
+                       <div key={index} style={window.innerWidth < 580 ? {width:'46%' } : null}>
+
             <ImageHover
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
             />
+            </div>
           ))}
         </div>
       </div>
@@ -169,14 +172,16 @@ const Main = () => {
 
       <div className='container ' >
         <h4 className='text-light mb-3'>Sports</h4>
-        <div className='align-items-center justify-content-center d-flex pb-5' style={window.innerWidth > 1000 ? {flexDirection:'row'} : { flexDirection:'column'}}>
+        <div className='align-items-center justify-content-center d-flex pb-5' style={window.innerWidth < 700 ? {flexWrap:'wrap'} : null}>
           {Sports.map((movie, index) => (
+                                    <div key={index} style={window.innerWidth < 700 ? {width:'46%' } : null}>
+
             <ImageHover 
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
-            />
+            /> </div>
           ))}
         </div>
       </div>

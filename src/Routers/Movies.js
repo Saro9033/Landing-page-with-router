@@ -102,45 +102,53 @@ const Movies = () => {
         }
       ] 
   return (
-   <div style={{background:'black'}}>
-     <div className='container '>
-        <h3 className='text-light '>Tamil Action Movies</h3>
-        <div className='d-flex  align-items-center  justify-content-center'>
-          {tamilAction.map((movie, index) => (
+   <div style={{background:'black'}} className='container'>
+
+<div className="container">
+      <h3 className="text-light">Tamil Action Movies</h3>
+      <div className="d-flex align-items-center justify-content-center" style={window.innerWidth < 580 ? {flexWrap:'wrap'} : null}>
+        {tamilAction.map((movie, index) => (
+          <div key={index} style={window.innerWidth < 580 ? {width:'30%' } : null}>
             <ImageHover
-              key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
             />
-          ))}
-        </div>
+          
+          </div>
+        ))}
       </div>
+    </div>
 
       <div className='container '>
         <h3 className='text-light '>Tamil Thriller Movies</h3>
-        <div className='d-flex align-items-center  justify-content-center'>
+        <div className='d-flex align-items-center  justify-content-center'  style={window.innerWidth < 580 ? {flexWrap:'wrap'} : null}>
           {tamilThriller.map((movie, index) => (
+                      <div key={index} style={window.innerWidth < 580 ? {width:'30%' } : null}>
+
             <ImageHover
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
             />
+            </div>
           ))}
         </div>
       </div>
 
       <div className='container '>
         <h3 className='text-light '>Horror Movies</h3>
-        <div className='d-flex mb-5 align-items-center  justify-content-center'>
+        <div className='d-flex mb-5 align-items-center  justify-content-center'  style={window.innerWidth < 580 ? {flexWrap:'wrap'} : null}>
           {Horror.map((movie, index) => (
-            <ImageHover
+           
+           <div key={index} style={window.innerWidth < 580 ? {width:'30%' } : null}>
+           <ImageHover
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
-            />
+            /> </div>
           ))}
         </div>
       </div>

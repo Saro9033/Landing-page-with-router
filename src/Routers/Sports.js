@@ -78,42 +78,47 @@ const Sports = () => {
     <div style={{background:'black'}} className='pt-3'>
      <div className='container '>
         <h3 className='text-light '>Best of AsiaCup 2023</h3>
-        <div className='d-flex mb-4 align-items-center justify-content-center' style={window.innerWidth > 1000 ? {flexDirection:'row'} : { flexDirection:'column'}}>
+        <div className='d-flex mb-4 align-items-center justify-content-center'  style={window.innerWidth < 700 ? {flexWrap:'wrap'} : null}>
           {asiaCup.map((movie, index) => (
+                                   <div key={index} style={window.innerWidth < 700 ? {width:'46%' } : null}>
+
             <ImageHover
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
-            />
+            /> </div>
           ))}
         </div>
       </div>
 
       <div className='container '>
         <h3 className='text-light '>ICC WCC 2023 Updates</h3>
-        <div className='d-flex mb-4  align-items-center  justify-content-center' style={window.innerWidth > 1000 ? {flexDirection:'row'} : { flexDirection:'column'}}>
+        <div className='d-flex mb-4  align-items-center  justify-content-center' style={window.innerWidth < 700 ? {flexWrap:'wrap'} : null}>
           {worldCUp.map((movie, index) => (
+            <div key={index} style={window.innerWidth < 700 ? {width:'46%' } : null}>
             <ImageHover
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
-            />
+            /> </div>
           ))}
         </div>
       </div>
 
       <div className='container '>
         <h3 className='text-light '>Football </h3>
-        <div className='d-flex pb-5 align-items-center  justify-content-center' style={window.innerWidth > 1000 ? {flexDirection:'row'} : { flexDirection:'column'}}>
+        <div className='d-flex pb-5 align-items-center  justify-content-center' style={window.innerWidth < 700 ? {flexWrap:'wrap'} : null}>
           {Football.map((movie, index) => (
+                        <div key={index} style={window.innerWidth < 700 ? {width:'46%' } : null}>
+
             <ImageHover
               key={index}
               imageUrl={movie.imageUrl}
               title={movie.title}
               description={movie.description}
-            />
+            />  </div>
           ))}
         </div>
       </div>
