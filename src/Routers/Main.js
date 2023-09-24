@@ -112,31 +112,31 @@ const Main = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src='https://shifu.hotstarext.com/SOURCE/VOD/cd-2023-09-22/BBS7TamilDatedKV4_deskXBB-80a497b7-2f17-44f4-a5eb-38172a2e3f33.jpg' alt="Bigboss"
-              className="d-block" style={window.innerWidth < 525 ? { width: '100%', height: '30vh' } : { width: '100%', height: '50vh' }} />
+              className="d-block" style={window.innerWidth < 525 ? { width: '100%', height: '25vh' } : { width: '100%', height: '50vh' }} />
           </div>
           <div className="carousel-item">
             <img src='https://shifu.hotstarext.com/SOURCE/VOD/cd-2023-08-24/AhsokaNSGoTGV3NS_deskXbb-481dfbba-9212-43a3-8f29-b37f4f59d8ab.jpg' alt="GOG"
-              className="d-block" style={window.innerWidth < 525 ? { width: '100%', height: '30vh' } : { width: '100%', height: '50vh' }} />
+              className="d-block" style={window.innerWidth < 525 ? { width: '100%', height: '25vh' } : { width: '100%', height: '50vh' }} />
           </div>
           <div className="carousel-item">
             <img src='https://shifu.hotstarext.com/SOURCE/VOD/cd-2023-08-13/LokiS2Dated_deskXbb-693ec981-0dc6-4d5e-8ce7-85a4c5db83b2.jpg' alt="Loki"
-              className="d-block" style={window.innerWidth < 525 ? { width: '100%', height: '30vh' } : { width: '100%', height: '50vh' }} />
+              className="d-block" style={window.innerWidth < 525 ? { width: '100%', height: '25vh' } : { width: '100%', height: '50vh' }} />
           </div>
         </div>
       </div>
 
       <div className='container'>
         <h3 className='text-light'>Popular Movies</h3>
-        <div className='d-flex mb-1 align-items-center justify-content-center'  style={window.innerWidth < 580 ? {flexWrap:'wrap'} : null}>
+        <div className='d-flex mb-1 align-items-center justify-content-center' style={window.innerWidth < 580 ? { flexWrap: 'wrap' } : null}>
           {popularMovies.map((movie, index) => (
-                       <div key={index} style={window.innerWidth < 580 ? {width:'46%' } : null}>
+            <div key={index} style={window.innerWidth < 580 ? { width: '50%' } : null}>
 
-            <ImageHover
-              key={index}
-              imageUrl={movie.imageUrl}
-              title={movie.title}
-              description={movie.description}
-            />
+              <ImageHover
+                key={index}
+                imageUrl={movie.imageUrl}
+                title={movie.title}
+                description={movie.description}
+              />
             </div>
           ))}
         </div>
@@ -172,16 +172,16 @@ const Main = () => {
 
       <div className='container ' >
         <h4 className='text-light mb-3'>Sports</h4>
-        <div className='align-items-center justify-content-center d-flex pb-5' style={window.innerWidth < 700 ? {flexWrap:'wrap'} : null}>
+        <div className='align-items-center justify-content-center d-flex pb-5' style={window.innerWidth < 700 ? { flexWrap: 'wrap' } : null}>
           {Sports.map((movie, index) => (
-                                    <div key={index} style={window.innerWidth < 700 ? {width:'46%' } : null}>
+            <div key={index} style={window.innerWidth < 700 ? { width: '50%' } : null}>
 
-            <ImageHover 
-              key={index}
-              imageUrl={movie.imageUrl}
-              title={movie.title}
-              description={movie.description}
-            /> </div>
+              <ImageHover
+                key={index}
+                imageUrl={movie.imageUrl}
+                title={movie.title}
+                description={movie.description}
+              /> </div>
           ))}
         </div>
       </div>
